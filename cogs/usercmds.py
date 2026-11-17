@@ -240,7 +240,7 @@ class UserCommands(commands.Cog):
             else:
                 search = search.replace(" ", "%20")
                 headers = {
-                'X-API-KEY': 'ddd_f17000053a9cf9b606119849caab1c7a',
+                'X-API-KEY': '[[DDTD_KEY]]',
                 }
 
                 response = requests.get(('https://www.doesthedogdie.com/api/v3/items?q=' + search), headers=headers)
@@ -267,7 +267,7 @@ class UserCommands(commands.Cog):
                 return
 
             else:
-                response = requests.get('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + search + "?key=c1001f88-14b7-45c6-aad9-7227a1e2cbdc")
+                response = requests.get('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + search + "MW_DICTIONARY_KEY")
                 response = response.json()
                 def_response = response[0]
 
@@ -293,7 +293,7 @@ class UserCommands(commands.Cog):
                 return
 
             else:
-                response = requests.get('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + search + "?key=c1001f88-14b7-45c6-aad9-7227a1e2cbdc")
+                response = requests.get('https://www.dictionaryapi.com/api/v3/references/collegiate/json/' + search + "MW_DICTIONARY_KEY")
                 response = response.json()
                 def_response = response[0]
 
@@ -301,7 +301,7 @@ class UserCommands(commands.Cog):
                 FL = str(def_response['fl'])
                 shortdef = str(def_response['shortdef'])
 
-                response = requests.get('https://dictionaryapi.com/api/v3/references/thesaurus/json/' + search + "?key=060f56e1-4053-49a7-8462-35de7c8238ce")
+                response = requests.get('https://dictionaryapi.com/api/v3/references/thesaurus/json/' + search + "MW_THESAURUS_KEY")
                 response = response.json()
                 def_response = response[0]
 
